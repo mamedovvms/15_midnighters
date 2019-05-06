@@ -3,13 +3,14 @@ import pytz
 import requests
 
 
-URL = 'http://devman.org/api/challenges/solution_attempts/?page={}'
+URL = 'http://devman.org/api/challenges/solution_attempts/'
 
 
 def load_attempts():
     page = 1
     while True:
-        response = requests.get(URL.format(page))
+        params = {'page': page}
+        response = requests.get(URL, params)
         page += 1
         if not response.ok:
             return False
@@ -50,4 +51,4 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
+    main()
