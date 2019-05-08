@@ -41,7 +41,7 @@ def print_midnighters(midnighters):
         print('Нет ни одного полуночника')
         return
 
-    for username, local_date in midnighters.items():
+    for username in midnighters:
         print('Пользователь: {}'.format(username))
 
 

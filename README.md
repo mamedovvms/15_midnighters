@@ -9,9 +9,9 @@ from 00 hours to 6 am. The result is a list of login and time.
 
 ```bash
 $ python bars.py seek_dev_nighters.py# possibly requires call of python3 executive instead of just python\
-User: id57193343 sent 05:18:42 2019.05.04
-User: vmamedov1984 sent 01:16:35 2019.04.30
-User: ZaurAgamov sent 00:24:05 2019.04.20
+User: id57193343
+User: vmamedov1984
+User: ZaurAgamov
 ...
 ```
 Running on Windows is similar.
