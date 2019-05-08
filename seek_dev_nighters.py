@@ -25,14 +25,14 @@ def get_local_date(timestamp, timezone):
 
 
 def get_midnighters():
-    midnighters = {}
+    midnighters = set()
     for record in load_attempts():
         timezone = record['timezone']
         timestamp = record['timestamp']
         username = record['username']
         local_date = get_local_date(timestamp, timezone)
         if local_date.hour <= 6:
-            midnighters[username] = local_date.strftime('%H:%M:%S %Y.%m.%d')
+            midnighters.add(username)
     return midnighters
 
 
@@ -42,7 +42,7 @@ def print_midnighters(midnighters):
         return
 
     for username, local_date in midnighters.items():
-        print('Пользователь: {} отправил {}'.format(username, local_date))
+        print('Пользователь: {}'.format(username))
 
 
 def main():
